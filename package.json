@@ -8,7 +8,7 @@
     "build": "mkdir -p public/img && npm run build:pug && npm run build:img && npm run build:css",
     "build:img": "cp -R src/img/* public/img",
     "build:css": "cp src/main.css public/main.css",
-    "build:pug": "pug --output-style compressed -o public/ src/**/*.pug",
+    "build:pug": "pug --output-style compressed -o public/ src/*.pug",
     "dev": "light-server-pug -o -s public -p 8080 -w \"src/**/*.pug # npm run build:pug\" -w \"src/main.css # npm run build:css # reloadcss\""
   },
   "repository": {
