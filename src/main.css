@@ -1,0 +1,28 @@
+    h1 { 
+      text-align: center 
+    }
+    
+    div {
+      padding: 5px;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    img { 
+      width: 75%;
+      margin-top: 10px;
+    }
+    
+    li { 
+      margin-bottom: 20px; 
+    }
+    
+    span { 
+      color: red;
+    }
+    hr {
+      margin: 50px 0;
+    }
+
+

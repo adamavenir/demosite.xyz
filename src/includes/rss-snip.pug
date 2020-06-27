@@ -1,0 +1,22 @@
+script(src='https://code.jquery.com/jquery-1.11.0.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-rss/3.3.0/jquery.rss.min.js')
+script(type='text/javascript', src='https://cmap.amp.vg/track/x6t2qs042kru/payload.js', async='')
+script.
+  AOS.init();
+script.
+  var navWrap = document.getElementsByClassName('nav-outer-wrap')[0];
+  var scrollPosition;
+  window.addEventListener('scroll', function(e) {
+  console.log(window.scrollY);
+  if (window.scrollY > 100) {
+  scrollPosition = window.scrollY;
+  console.log('scrollPosition is ', scrollPosition);
+  navWrap.classList.add('scrolled');
+  } else if (window.scrollY <= 100) {
+  scrollPosition = window.scrollY;
+  console.log('scrollPosition is ', scrollPosition);
+  navWrap.classList.remove('scrolled');
+  }
+  });
+
+

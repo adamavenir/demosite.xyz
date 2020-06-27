@@ -1,0 +1,19 @@
+mixin blog-feed
+  if attributes.label
+    - var url = "https://elevatecompanynews.blogspot.com/feeds/posts/default/-/" + attributes.label
+  else
+    - var url = "https://elevatecompanynews.blogspot.com/feeds/posts/default"
+
+  script.
+      jQuery(function($) {
+        $("#blog-feed").rss(
+            "#{url}",
+            {
+                limit: 3,
+                ssl: true,
+                support: false,
+                layoutTemplate: "<h4>From the elevate blog:</h4><div class='flex-container'>{entries}</div>",
+                entryTemplate: "<div><a href='{url}'>{title}</a></div>",
+            }
+        );
+      });

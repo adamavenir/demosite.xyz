@@ -1,0 +1,27 @@
+doctype html
+html(lang='en')
+
+  block vars
+
+  head
+    title
+      block title
+      | web for horses 
+
+    meta(charset='utf-8')
+    link(rel='stylesheet', type='text/css', href='/main.css')
+    meta(name='viewport', content='width=device-width')
+    meta(property='og:url', content=pageUrl)
+    meta(property='og:title', content=pageTitle)
+    meta(property='og:description', content=pageDescription)
+    meta(property='og:image', content=pageImage)
+
+    block head
+
+  body(id=headlineId)
+    header
+      block header
+
+    block content
+
+    block scripts

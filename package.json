@@ -1,0 +1,30 @@
+{
+  "name": "horsewebs.xyz",
+  "version": "1.0.0",
+  "description": "web for horses",
+  "scripts": {
+    "start": "npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "mkdir -p public/img && npm run build:pug && npm run build:img && npm run build:css",
+    "build:img": "cp -R src/img/* public/img",
+    "build:css": "cp src/main.css public/main.css",
+    "build:pug": "pug --output-style compressed -o public/ src/*.pug",
+    "dev": "light-server-pug -o -s public -p 8080 -w \"src/**/*.pug # npm run build:pug\" -w \"src/main.css # npm run build:css # reloadcss\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamavenir/elevate.net.git"
+  },
+  "author": "Adam Avenir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamavenir/horsewebs.xyz/issues"
+  },
+  "homepage": "https://github.com/adamavenir/horsewebs.xyz#readme",
+  "devDependencies": {
+    "light-server-pug": "^2.6.4"
+  },
+  "dependencies": {
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
